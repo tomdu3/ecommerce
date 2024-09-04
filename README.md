@@ -1,6 +1,6 @@
 # Ecommerce Page
 
-This is an ecommerce web site based Zander's E-commerce project v2
+This is an ecommerce web site based on Zander's E-commerce project v2
 [Django E-commerce Project v2](https://youtu.be/EbLEyM9SyZQ?si=ZWv0Ha6-doBYVMPU)
 
 ## Technology Stack
