@@ -1,7 +1,7 @@
 import pytest
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-
+from ecommerce.tests.fixtures import django_fixture_setup
 
 # @pytest.mark.selenium
 # def test_create_new_admin_user(create_admin_user):
@@ -9,7 +9,9 @@ from selenium.webdriver.common.by import By
 
 
 @pytest.mark.selenium
-def test_dashboard_admin_login(live_server, db_fixture_setup, chrome_browser_instance):
+def test_dashboard_admin_login(
+    live_server, django_fixture_setup, chrome_browser_instance
+):
     browser = chrome_browser_instance
     browser.get("%s%s" % (live_server.url, "/admin/login/"))
 
