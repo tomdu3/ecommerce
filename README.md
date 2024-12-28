@@ -11,3 +11,16 @@ This is an ecommerce web site based on Zander's E-commerce project v2
 - Pytest and pytest-django
 - pytest factory boy
 - pytest selenium
+
+## Docker
+
+- build docker image:
+  `docker build -t ecommerce .`
+- run docker image
+  `docker run -p 8888:8000 ecommerce`
+- clean docker resources
+  `docker system prune`
+
+  ```
+
+  ```
