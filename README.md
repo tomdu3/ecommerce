@@ -20,6 +20,8 @@ This is an ecommerce web site based on Zander's E-commerce project v2
   `docker run -p 8888:8000 ecommerce`
 - clean docker resources
   `docker system prune`
+- run with docker-compose
+  `docker compose up`
 
   ```
 
