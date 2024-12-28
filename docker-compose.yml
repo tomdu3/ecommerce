@@ -1,0 +1,12 @@
+name: e-commerce
+
+services:
+  e-commerce:
+    build: .
+    volumes:
+      - .:/ecommerce
+    ports:
+      - 8000:8000
+    image: e-commerce:ecommerce
+    container_name: ecommerce_django
+    command: python manage.py runserver 0.0.0.0:8000
