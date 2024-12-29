@@ -5,11 +5,22 @@ import sys
 
 def rename_files(directory, recursive=False):
     """
-        Rename files in a directory and its subdirectories.
+    Rename files in the specified directory by removing spaces from their names.
 
-        Args:
-            directory (str): The directory to rename files in.
-            recursive (bool): Whether to rename files in subdirectories.
+    This function traverses the given directory and renames all files by removing any spaces in their filenames.
+    If the `recursive` parameter is set to True, it will also rename files in all subdirectories.
+
+    Args:
+        directory (str): The path to the directory where files will be renamed.
+        recursive (bool): If True, the function will rename files in subdirectories as well. 
+                            If False, only files in the specified directory will be renamed.
+
+    Returns:
+        None: This function does not return a value. It prints the old and new filenames for each renamed file.
+
+    Raises:
+        FileNotFoundError: If the specified directory does not exist.
+        OSError: If an error occurs during the renaming process (e.g., permission issues).
     """
     for root, dirs, files in os.walk(directory):
         for filename in files:
