@@ -23,6 +23,6 @@ This is an ecommerce web site based on Zander's E-commerce project v2
 - run with docker-compose
   `docker compose up`
 
-  ```
+## Database Design
 
-  ```
+[Database Design](./docs/Ecommerce-DB.png)
