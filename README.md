@@ -25,4 +25,4 @@ This is an ecommerce web site based on Zander's E-commerce project v2
 
 ## Database Design
 
-[Database Design](./docs/Ecommerce-DB.png)
+![Database Design](./docs/Ecommerce-DB.png)
