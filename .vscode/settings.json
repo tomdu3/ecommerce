@@ -1,0 +1,26 @@
+{
+    "editor.formatOnPaste": true,
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.sortImports.args": [
+        "--profile=black"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActions.onSave": {
+            "source.organizeImports": true
+        },
+        "editor.tabSize": 4
+    },
+    "black-formatter.args": [
+        "--line-length=79"
+    ],
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    }
+}
