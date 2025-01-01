@@ -25,4 +25,11 @@ This is an ecommerce web site based on Zander's E-commerce project v2
 
 ## Database Design
 
+At the moment we are using a single database for all the data.
+
 ![Database Design](./docs/Ecommerce-DB.png)
+
+## Testing
+
+We are using Factory Boy to generate test data. We are also using data fixtures to populate the database with test data.
+
