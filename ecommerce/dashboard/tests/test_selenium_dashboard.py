@@ -1,11 +1,11 @@
 import pytest
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from ecommerce.tests.fixtures import django_fixture_setup
+from ecommerce.tests.fixtures import db_fixture_setup
 
 @pytest.mark.selenium
 def test_dashboard_admin_login(
-    live_server, django_fixture_setup, chrome_browser_instance
+    live_server, db_fixture_setup, chrome_browser_instance
 ):
 
     browser =chrome_browser_instance
