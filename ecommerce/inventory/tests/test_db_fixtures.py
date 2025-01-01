@@ -7,11 +7,13 @@ from ecommerce.inventory import models
     "id, name, slug, is_active",
     [
         (1, "fashion", "fashion", True),
-        (18, "electronics", "electronics", True),
-        (27, "home", "home", True),
+        (18, "trainers", "trainers", True),
+        (35, "baseball", "baseball", True),
     ],
 )
-def test_inventory_category_dbfixture(db, db_fixture_setup, id, name, slug, is_active):
+def test_inventory_category_dbfixture(
+        db, db_fixture_setup, id, name, slug, is_active
+):
     result = models.Category.objects.get(id=id)
     assert result.name == name
     assert result.slug == slug
