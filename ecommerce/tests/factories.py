@@ -19,3 +19,5 @@ class CategoryFactory(factory.django.DjangoModelFactory):
         text="cat_slug_??????"
     )  # create a random string that starts with cat_slug_
     is_active = True
+
+register(CategoryFactory)
