@@ -103,3 +103,20 @@ def test_inventory_db_product_dbfixture(
     assert result.is_active == is_active
     assert result_updated_at == created_at
     assert result_updated_at == updated_at
+
+
+def test_inventory_db_product_uniqueness_integrity(db, product_factory):
+    new_web_id = product_factory.create(web_id=123456789)
+    with pytest.raises(IntegrityError):
+        product_factory.create(web_id=123456789)
+
+def test_inventory_db_product_insert_data(
+    db, product_factory, category_factory
+):
+    new_category = category_factory.create()
+    new_product = product_factory.create(category=(1, 36))
+    result_product_category = new_product.category.all().count()
+    assert "web_id_" in new_product.web_id
+    assert result_product_category == 2
+
+
